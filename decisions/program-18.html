@@ -4,15 +4,11 @@
 
 	<body>
 		<script type="text/javascript">
-		//use document.write 
 
-		//write code that displays the output of the 12 times table using a function
-		// I need to generate a number between 1 and 12. The loopCounter is doing this. I need to get the loopCounter and multiply it by 12
+	//creating a function whick will iterate whilever timesByStart <+ timesByEnd and increase the former by one each time
+	//for each iteration it will write the result of the calculation to the document.
+	//the function can then be called later e.g. writeTimesTable(4,6,8)
 
-		//I need to create a function which does a times table on a range of numbers.
-		//the table variable is the times table, and number from and number to 
-
-	
 		function writeTimesTable(timesTable, timesByStart, timesByEnd)
 		{
 			for (;timesByStart <= timesByEnd; timesByStart++)
@@ -22,11 +18,26 @@
 		}
 
 		var timesTable;
-		var timesByStart;
-		var timesbyEnd;
-		
-		writeTimesTable(4, 4, 9);
-		writeTimesTable(11, 1, 11);
+
+//initialize the timesTable variable as a prompt and this then compared to the -1. If it is not -1 then the while is true so the rest of the loop runs
+
+		while ( (timesTable = prompt("Enter the times table",-1)) != -1)
+		{
+			//check to see whether the value entered is actually a number, if it isn't then the user is prompted to enter a number
+			while (isNaN(timesTable) == true)
+			{
+				timesTable = prompt(timesTable + " is not a valid number, please retry", -1);
+			}
+			// if the user has entered a valid number of 1 or above then the break statement breaks out of the loop. If != -1 then the document.write executes and the function is called
+			if (timesTable == -1);
+			{
+				break;
+			}
+
+			document.write("<br />The " + timesTable + " times table <br />");
+			writeTimesTable(timesTable, 1, 12);
+		}
+
 		</script>
 
 
