@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xlmns="http://www.w3.org/1999/xhtml">
+
+	<body>
+		<script type="text/javascript">
+		//use document.write 
+
+		//write code that displays the output of the 12 times table using a function
+		// I need to generate a number between 1 and 12. The loopCounter is doing this. I need to get the loopCounter and multiply it by 12
+
+		//I need to create a function which does a times table on a range of numbers.
+		//the table variable is the times table, and number from and number to 
+
+	
+		function writeTimesTable(timesTable, timesByStart, timesByEnd)
+		{
+			for (;timesByStart <= timesByEnd; timesByStart++)
+			 {
+				document.write(timesTable + " * " + timesByStart + " equals " + timesTable * timesByStart + "<br />");
+			}
+		}
+
+		var timesTable;
+		var timesByStart;
+		var timesbyEnd;
+		
+		writeTimesTable(4, 4, 9);
+		writeTimesTable(11, 1, 11);
+		</script>
+
+
+
+	</body>
+
+</html>

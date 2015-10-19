@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xlmns="http://www.w3.org/1999/xhtml">
+	<body>
+		<script type="text/javascript">
+		//declaring the variables that are being used
+			var degFahren = new Array(212, 32, -459.15);
+			var degCent =  new Array(); //empty array
+
+			var loopCounter; //will be used to keep track of what array index we are entering
+
+
+			for (loopCounter = 0; loopCounter <= 2; loopCounter++)
+				//initialising the loop counter to 0
+			{
+				//sets the degCent at the index determined by the loopCounter to be the converted degFahren, so this is putting values into the array
+				degCent[loopCounter] = 5/9 * (degFahren[loopCounter] - 32);
+			} 
+			//goes back through and prints the values to the screen but goes backwards through the array
+			for (loopCounter = 2; loopCounter >= 0; loopCounter--)
+			{
+				document.write("value " + loopCounter + " was " + degFahren[loopCounter] + " degrees Fahrenheit");
+				document.write(" which is " + degCent[loopCounter] + " degrees centigrade <br />");
+			}
+
+		</script>
+	</body>
+</html>

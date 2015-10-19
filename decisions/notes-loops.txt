@@ -1,0 +1,19 @@
+
+
+Syntax for loops:
+
+for loops
+
+for (loopCounter = 1; loopCounter <= 10; loopCounter ++)
+{
+	//do something;
+}
+
+
+for in loop
+
+var elementIndex;
+for (elementIndex in myArray)
+{
+	//do something;
+}
