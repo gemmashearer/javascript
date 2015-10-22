@@ -23,8 +23,66 @@
 
 	alert("Well done " + contestantName + ", you have finished your audition. It's time to hear what the judges have to say.");
 
-		
+	alert("First up is Rita Ora");
 
+	var ritasComment = Math.random();
+
+	if (ritasComment <= 0.5)
+	{
+		alert("I loved your audition, you nailed it. I would love to see you in the next round. It's a yes from me.");
+	} else 
+	{
+		alert("I'm sorry " + contestantName + " but I didn't enjoy it. It's a no from me.");
+	}
+		
+	alert("Thanks Rita. Ok Cheryl?");
+
+	var cherylsComment = Math.random();
+
+	if (cherylsComment <= 0.5)
+	{
+		alert(contestantName + " that was a great audition. It's a yes from me.");
+	} else 
+	{
+		alert(contestantName + ", I'm sorry, you just can't sing. It's a no.");
+	}
+
+	alert("Grimmy?");
+
+	var grimmysComment = Math.random();
+
+	if (grimmysComment <= 0.5)
+	{
+		alert("That was one of the best auditions we've seen today. I would definitely play that on radio 1");
+	} else 
+	{
+		alert("That wasn't the best. I don't think you're ready for the next round. It's a no from me.");
+	}
+
+	alert("Thanks Grimmy. Simon?");
+
+	var simonsComment = Math.random();
+
+	if (simonsComment <= 0.5)
+	{
+		alert("I didn't like it, I loved it. It's a yes");
+	} else 
+	{
+		alert(contestantName + ", let me be honest. You can't sing, you have no star quality. It was frankly embarrasing. You're going home.");
+	}
+
+	if (ritasComment <= 0.5 && cherylsComment <= 0.5 && simonsComment <= 0.5 && grimmysComment <= 0.5)
+	{
+		alert("That's 4 yesses! Congratulations " + contestantName + " you're through to bootcamp");
+	} else if (ritasComment >= 0.5 && cherylsComment >= 0.5 && simonsComment >= 0.5 && grimmysComment >= 0.5)
+	{
+		alert("That's 4 nos. I'm afraid you're not through to bootcamp");
+	} else if {
+		//need to have some code that will run if three of these are <= 0.5 and 1 is >= 0.5
+	} else if 
+	{
+		//if there are 2 of each the simons comment is the deciding one. Need 2 lines of code for that
+	}
 
 		</script>
 	</body>
