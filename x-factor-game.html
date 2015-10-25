@@ -4,9 +4,22 @@
 	<body>
 		<script type="text/javascript">
 
+		var simonsScore = 0;
+		var cherylsScore = 0;
+		var ritasScore = 0;
+		var grimmysScore = 0;
+		var totalScore = 0;
+
+		function calculateScore(){
+			totalScore = simonsScore + ritasScore + cherylsScore + grimmysScore;
+			return totalScore;
+		}
+
 	alert("Welcome to the X factor!");
 
 	var contestantName = prompt("Please enter your name","name");
+
+	contestantName = contestantName.toUpperCase();
 
 	alert("Nice to meet you " + contestantName + ".");
 	//insert a confirm for are you nervous?
@@ -30,6 +43,7 @@
 	if (ritasComment <= 0.5)
 	{
 		alert("I loved your audition, you nailed it. I would love to see you in the next round. It's a yes from me.");
+		ritasScore = 1;
 	} else 
 	{
 		alert("I'm sorry " + contestantName + " but I didn't enjoy it. It's a no from me.");
@@ -42,6 +56,7 @@
 	if (cherylsComment <= 0.5)
 	{
 		alert(contestantName + " that was a great audition. It's a yes from me.");
+		cherylsScore = 1;
 	} else 
 	{
 		alert(contestantName + ", I'm sorry, you just can't sing. It's a no.");
@@ -54,6 +69,7 @@
 	if (grimmysComment <= 0.5)
 	{
 		alert("That was one of the best auditions we've seen today. I would definitely play that on radio 1");
+		grimmysScore = 1;
 	} else 
 	{
 		alert("That wasn't the best. I don't think you're ready for the next round. It's a no from me.");
@@ -66,24 +82,29 @@
 	if (simonsComment <= 0.5)
 	{
 		alert("I didn't like it, I loved it. It's a yes");
+		simonsScore = 2;
 	} else 
 	{
 		alert(contestantName + ", let me be honest. You can't sing, you have no star quality. It was frankly embarrasing. You're going home.");
 	}
 
-	if (ritasComment <= 0.5 && cherylsComment <= 0.5 && simonsComment <= 0.5 && grimmysComment <= 0.5)
-	{
-		alert("That's 4 yesses! Congratulations " + contestantName + " you're through to bootcamp");
-	} else if (ritasComment >= 0.5 && cherylsComment >= 0.5 && simonsComment >= 0.5 && grimmysComment >= 0.5)
-	{
-		alert("That's 4 nos. I'm afraid you're not through to bootcamp");
-	} else if {
-		//need to have some code that will run if three of these are <= 0.5 and 1 is >= 0.5
-	} else if 
-	{
-		//if there are 2 of each the simons comment is the deciding one. Need 2 lines of code for that
+	calculateScore();
+	
+	if ( totalScore == 5 ) {
+		alert("Congratulations, you got 4 yeses! You're through to bootcamp.");
+	}
+	else if ( totalScore == 0 ){
+		alert("I'm so sorry " + contestantName + " that was 4 nos. You're not going through to bootcamp.");
+	} else if (totalScore >= 3 && simonsScore == 2){
+		alert("Congratulations, you got 3 yeses, you're through to Bootcamp.");
+	} else if ( totalScore == 3 && simonsScore == 0 ) {
+		alert("Congratulations, you got 3 yeses, you're through to Bootcamp.");
+	} else if ( totalScore == 3 && simonsScore == 2 ){
+		alert("Ok " + contestantName + ", you only got 2 yeses but Simon has the deciding vote and you're though to bootcamp. Congratulations!");
+	} else {
+		alert("I'm sorry " + contestantName + " but it's a no from the judges, you're not going through to bootcamp.");
 	}
 
-		</script>
+	</script>
 	</body>
 </html>
