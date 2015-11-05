@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		//this function is to check what type of character the first letter is
+		//the charAtCode index is 0 because that is the first character
+		function checkCharType(charToCheck)
+		{
+			var returnValue = "0";
+			var charCode = charToCheck.charCodeAt(0);
+
+			//here if the letter is greater than or equal to a and less than or equal to z the return value will be u
+			//this deals with the whole alphabet as an uppercase character series
+			if (charCode >= "A".charCodeAt(0) && charCode <= "Z".charCodeAt(0))
+			{
+				returnValue = "U";
+				//this deals with the characters as lowercase
+			} else if (charCode >= "a".charCodeAt(0) && charCode <= "z".charCodeAt(0))
+			{
+				returnValue = "L";
+				//this deals with the characters as numbers
+			} else if (charCode >= "0".charCodeAt(0) && charCodeAt <= "9".charCodeAt(0));
+			{
+				returnValue = "N";
+			}
+			return returnValue;
+		}
+		</script>
+	</head>
+
+	<body>
+<script type="text/javascript">
+
+	var myString =  prompt("Enter some text","some text");
+
+	//switch statement gives all the different options from the function
+	switch (checkCharType(myString)) //this calls the function on the myString variable and gives each return value
+	//option as a case statement
+	{
+		case "U":
+		document.write("First character was uppercase");
+		break;
+		case "L":
+		document.write("First character was lowercase");
+		break;
+		case "N":
+		document.write("First character was a number");
+		break;
+		default:
+		document.write("First character was not a character nor a number");
+	}
+	</script>
+	</body>
+</html>

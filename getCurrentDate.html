@@ -1,0 +1,59 @@
+<html>
+<head>
+
+</head>
+<body>
+	<script type="text/javascript">
+	// declaring a new array which contains the months as strings
+	//we can then use the array index to access the 
+	var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+
+	//declaring a new date variable which will get today's date and time
+	var dateNow = new Date(); //this gets date and time
+	//this makes the yearNow have the year that belongs to the dateNow
+	var yearNow = dateNow.getFullYear();
+	//get the month. the getMonth property will return the month as an integer, but we don't want an integer, we want the actual month. So, we call get month on the dateNow to make sure that we can get the actual month that it is right now. That month is then equal to the index that the string month is in the array, so that it pulls out the string month and makes it equal to the monthNow
+	var monthNow =  months[dateNow.getMonth()];
+	//gets the date
+	var dayNow = dateNow.getDate();
+	var daySuffix;
+
+	// the switch statement applies a suffix to the date
+	//the different cases are the different dates
+	switch (dayNow)
+	{
+		//these are all the dates that end in st
+	case 1:
+	case 21:
+	case 31:
+		daySuffix = "st";
+		break
+	// these are all the dates that end in nd
+	case 2: 
+	case 22:
+		daySuffix = "nd";
+		break;
+	//these are the dates that end in rd
+	case 3:
+	case 23:
+		daySuffix = "rd";
+		break;
+	//everything else ends in th
+	default:
+		daySuffix = "th";
+		break;
+	}
+	
+	//this writes the day along with its suffix
+	document.write("It is the " + dayNow + daySuffix + " day");
+	//this writes the month 
+	document.write(" in the month of " + monthNow);
+	//this writes the year
+	document.write(" in the year " + yearNow);
+	
+	
+	</script>
+</body>
+
+</html>

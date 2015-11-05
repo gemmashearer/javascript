@@ -1,0 +1,25 @@
+<html>
+<body>
+	<script type="text/javascript">
+		var  myShopping = new Array("Eggs", "Milk", "Potato", "Banana", "Cereals");
+
+		var ord = prompt("Enter 1 for alphabetical order, and -1 for reverse order", 1);
+
+		if (ord == 1)
+		{
+			myShopping.sort();
+			document.write(myShopping.join("<br />"));
+
+		} else if (ord == -1)
+		{
+			myShopping.sort();
+			myShopping.reverse();
+			document.write(myShopping.join("<br />"));
+		} else 
+		{
+			document.write("This is not a valid input");
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+	<script type="text/javascript">
+	var myString = "Welcome to Wrox books. ";
+	myString = myString + "The Wrox website is www.wrox.com. ";
+	myString = myString + "Visit the Wrox website today. Thanks for buying Wrox."
+	//was this adding 2 strings together?
+
+
+
+
+	var foundAtPosition = 0;
+	var wroxCount = 0;
+
+	while (foundAtPosition != -1)//as in the index is at least 0
+	{
+		//makes the foundAtPosition variable equal to the index that is the instance of Wrox
+		foundAtPosition = myString.indexOf("Wrox", foundAtPosition);
+		//if an instance has been found, then add 1 to the wrox count and increase the foundAtPosition variable
+		if ( foundAtPosition != -1)
+		{
+			wroxCount++;
+			foundAtPosition++;//moves you along to the next found as position so that you can keep moving through the string
+		}
+	}
+
+	document.write("There are " + wroxCount + " occurences of the word Wrox");
+
+	
+	</script>
+</body>
+</html>

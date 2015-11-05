@@ -1,0 +1,30 @@
+<html>
+<body>
+	<script type="text/javascript">
+
+	
+
+	//converting case
+	//toUpperCase() and toLowerCase()
+
+	//selecting a single character from a string
+	//need the charAt() and charCodeAt() meth0ds
+
+	// charAt() accepts one parameter whihc is the index position of the character you want. That character will then be returned
+
+	//e.g. to find the last character in a string
+
+	var myString = prompt("Enter some text","Yo bitch");
+	var theLastChar = myString.charAt(myString.length - 1);
+	//the -1 bit above is to move it back from the end of the string to capture that character
+	document.write("The last character is " + theLastChar);
+
+	//charCodeAt is similar but returns the decimal character that represents it
+
+	var charString = "Character string";
+	var getCharCode = charString.charCodeAt(4);
+	document.write("The char code is " + getCharCode);
+	</script>
+</body>
+
+</html>
